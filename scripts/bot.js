@@ -1,10 +1,9 @@
 const fs = require('fs');
-const path = require('path');
 const childProcess = require('child_process');
 
 const args = process.argv.slice(2);
 const appname = 'rn dates'
-const date = new Date().toLocaleString()
+const date = new Date().toLocaleDateString()
 const time = new Date().toLocaleTimeString()
 
 
