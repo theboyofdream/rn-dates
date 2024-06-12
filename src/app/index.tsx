@@ -1,27 +1,28 @@
-import { Image, StyleSheet, Platform, View, Text, Button, Pressable, TouchableOpacity, useColorScheme } from 'react-native';
+import { View } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { PropsWithChildren, useEffect, useState } from 'react';
-import {
-  ChevronDown,
-  ChevronUp,
-  ChevronLeft,
-  ChevronRight,
-  ChevronFirst,
-  ChevronLast,
-  ChevronsUpDown,
-  ChevronsDownUp
-} from 'lucide-react-native';
+import { Text } from '@/components/ui/Text';
+import { useTheme } from '@/themes/useTheme';
 
 
 export default function HomeScreen() {
+  const { background } = useTheme().colors
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, gap: 8, alignItems: 'center', backgroundColor: background }}>
 
+      <View>
+
+
+      </View>
+
+      <View style={{ alignItems: 'center' }}>
+        <Text style={{ fontSize: 24 }}>
+          Quickly add calendar/date picker to your React Native app
+        </Text>
+        <Text style={{ fontSize: 14 }}>
+          Copy, paste and redesign the look & feel. My logic, your design.
+        </Text>
+      </View>
     </View>
   );
 }
